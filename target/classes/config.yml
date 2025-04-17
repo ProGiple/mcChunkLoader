@@ -1,0 +1,29 @@
+chunk_loaders:
+  first:
+    material: STRUCTURE_BLOCK
+    displayName: "&7Прогрузчик чанков (3 x 3)"
+    lore: []
+    chunk_radius: 1 # сколько чанков вокруг этого чанка будет прогружено? Т.е. если стоит 1 - будет прогружена область 3x3, центр которой будет чанк с блоком
+    particles:
+      color: 100, 56, 78
+      scroll_time: 230 # раз в сколько миллисекунд будут подниматься партиклы на one_scroll_blocks блоков
+      one_scroll_blocks: 0.12 # на сколько блоков поднимется партикл через scroll_ticks тиков
+      radius: 1
+  second:
+    material: STRUCTURE_BLOCK
+    displayName: "&bПрогрузчик чанков (5 x 5)"
+    lore: [ ]
+    chunk_radius: 2
+    particles:
+      color: 190, 120, 66
+      scroll_time: 230
+      one_scroll_blocks: 0.12
+      radius: 1.25
+messages:
+  noPermission: []
+  reload: []
+  giving:
+    - "айди предмета: {0}"
+    - "игроку: {1}"
+  playerIsUnknown: []
+  unknownItemId: []
