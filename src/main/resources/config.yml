@@ -1,9 +1,13 @@
+loaders: # поставьте 0, чтобы выключить
+  default_spawner_load_seconds: 5
+  max_spawn_entities: 3
+  default_plants_load_seconds: 30
 chunk_loaders:
   first:
     material: STRUCTURE_BLOCK
     displayName: "&7Прогрузчик чанков (3 x 3)"
     lore: []
-    chunk_radius: 1 # сколько чанков вокруг этого чанка будет прогружено? Т.е. если стоит 1 - будет прогружена область 3x3, центр которой будет чанк с блоком
+    radius: 4 # сколько блоков вокруг этого блока будет прогружено?
     particles:
       color: 100, 56, 78
       scroll_time: 230 # раз в сколько миллисекунд будут подниматься партиклы на one_scroll_blocks блоков
@@ -13,7 +17,7 @@ chunk_loaders:
     material: STRUCTURE_BLOCK
     displayName: "&bПрогрузчик чанков (5 x 5)"
     lore: [ ]
-    chunk_radius: 2
+    radius: 8
     particles:
       color: 190, 120, 66
       scroll_time: 230

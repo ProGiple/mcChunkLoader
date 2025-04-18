@@ -8,7 +8,6 @@ import org.satellite.dev.progiple.mcchunkloader.chunkloaders.ChunkLoader;
 import org.satellite.dev.progiple.mcchunkloader.chunkloaders.ChunkLoaderManager;
 import org.satellite.dev.progiple.mcchunkloader.chunkloaders.listeners.BlockBreakHandler;
 import org.satellite.dev.progiple.mcchunkloader.chunkloaders.listeners.BlockPlaceHandler;
-import org.satellite.dev.progiple.mcchunkloader.chunkloaders.listeners.UnloadChunkHandler;
 import org.satellite.dev.progiple.mcchunkloader.configs.LocationConfig;
 
 public final class McChunkLoader extends LunaPlugin {
@@ -22,7 +21,7 @@ public final class McChunkLoader extends LunaPlugin {
 
         saveDefaultConfig();
         this.loadFile("locations.yml");
-        this.registerListeners(new BlockBreakHandler(), new BlockPlaceHandler(), new UnloadChunkHandler());
+        this.registerListeners(new BlockBreakHandler(), new BlockPlaceHandler());
         this.registerTabExecutor(new Command(), "mcchunkloader");
 
         ConfigurationSection section = LocationConfig.getSection("locations");

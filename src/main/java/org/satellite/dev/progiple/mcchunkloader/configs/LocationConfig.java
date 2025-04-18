@@ -27,7 +27,7 @@ public class LocationConfig {
 
     public void setLocation(Location location, String id) {
         String path = String.format("locations.%s", Utils.getRKey((byte) 32));
-        config.setLocation(path + ".location", location, true, true);
+        config.setLocation(path + ".location", location.clone(), true, true);
         config.setString(path + ".id", id);
 
         config.save();

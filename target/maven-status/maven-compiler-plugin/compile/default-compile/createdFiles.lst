@@ -2,10 +2,13 @@ org\satellite\dev\progiple\mcchunkloader\configs\Config.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\particles\ParticleLine.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\ChunkLoader.class
 org\satellite\dev\progiple\mcchunkloader\Command.class
-org\satellite\dev\progiple\mcchunkloader\chunkloaders\listeners\UnloadChunkHandler.class
+org\satellite\dev\progiple\mcchunkloader\chunkloaders\AllowedType$PlacementType.class
+org\satellite\dev\progiple\mcchunkloader\chunkloaders\AllowedType.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\listeners\BlockBreakHandler.class
 org\satellite\dev\progiple\mcchunkloader\configs\LocationConfig.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\particles\SpawnParticleTask.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\ChunkLoaderManager.class
 org\satellite\dev\progiple\mcchunkloader\chunkloaders\listeners\BlockPlaceHandler.class
+org\satellite\dev\progiple\mcchunkloader\configs\Config$1.class
 org\satellite\dev\progiple\mcchunkloader\McChunkLoader.class
+org\satellite\dev\progiple\mcchunkloader\chunkloaders\ChunkLoader$Task.class

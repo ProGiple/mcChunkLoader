@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.novasparkle.lunaspring.API.Util.utilities.Utils;
+import org.satellite.dev.progiple.mcchunkloader.chunkloaders.ChunkLoaderManager;
 import org.satellite.dev.progiple.mcchunkloader.configs.Config;
 import org.satellite.dev.progiple.mcchunkloader.configs.LocationConfig;
 
@@ -26,6 +27,11 @@ public class Command implements TabExecutor {
             if (strings[0].equalsIgnoreCase("reload")) {
                 Config.reload();
                 LocationConfig.reload();
+
+                ChunkLoaderManager.getChunkLoaders().forEach(c -> {
+                    c.getTask().cancel();
+                    c.getTask().runTaskAsynchronously(McChunkLoader.getINSTANCE());
+                });
                 Config.sendMessage(commandSender, "reload");
                 return true;
             }
